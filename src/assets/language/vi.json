@@ -1,0 +1,34 @@
+{
+  "appName": "react-backoffice",
+  "label": {
+    "hi": "Xin chào",
+    "error": "Lỗi",
+    "warning": "Cảnh báo",
+    "success": "Thành công",
+    "create": "Tạo mới",
+    "edit": "Sửa",
+    "delete": "Xóa",
+    "list": "Danh sách",
+    "first": "Đầu",
+    "last": "Cuối",
+    "next": "Sau",
+    "previous": "Trước",
+    "show": "Hiển thị",
+    "records": "Dữ liệu",
+    "pageOf": "Trang {page} trên {total}",
+    "status": "Trạng thái",
+    "search": "Tìm kiếm",
+    "save": "Lưu",
+    "information": "Thông tin",
+    "active": "Đang hoạt động",
+    "inactive": "Khóa",
+    "select": "Chọn "
+  },
+  "normalMessage": {
+    "saveSuccess": "Dữ liệu lưu thành công."
+  },
+  "errorMessage": {
+    "internalServerError": "Lỗi ứng dụng! Vui lòng liên hệ hỗ trợ.",
+    "requiredField": "{field} không được để trống!"
+  }
+}
