@@ -1,13 +1,14 @@
 import { AnyType } from 'one-frontend-framework';
+import { AppEnvironment } from '../constants/appEnvironment';
 
 /**
  * To use for all screen
  * @returns 
  */
 function GlobalHook() {
-    const appVersion = import.meta.env.VITE_APP_VERSON;
-    const appName = import.meta.env.VITE_APP_TITLE;
-    const appEnv = import.meta.env.VITE_APP_ENV;
+    const appVersion = AppEnvironment.VITE_APP_VERSION;
+    const appName = AppEnvironment.VITE_APP_TITLE;
+    const appEnv = AppEnvironment.VITE_APP_ENV;
 
     /**
      * add script to page

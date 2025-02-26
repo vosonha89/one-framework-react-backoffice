@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import { container } from "tsyringe";
 import { AbstractModel, ErrorModel as FWErrorModel } from 'one-frontend-framework';
-import { LanguageService } from '../../services/languageService';
+import { LanguageService } from '../services/languageService';
 import { BaseList } from './baseType';
 import { ConstantValue } from '../constants/constantValue';
 import { ObjectHelper } from '../functions/objectHelper';

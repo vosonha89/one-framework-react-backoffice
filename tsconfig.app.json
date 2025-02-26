@@ -25,7 +25,8 @@
     "noUncheckedSideEffectImports": true,
     /* External */
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "forceConsistentCasingInFileNames": true
   },
   "include": [
     "src"

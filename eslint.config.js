@@ -12,7 +12,7 @@ export default tseslint.config(
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
-      ecmaVersion: 2020,
+      ecmaVersion: 2021,
       globals: globals.browser,
     },
     plugins: {
@@ -31,7 +31,8 @@ export default tseslint.config(
           "allowDestructuring": true, // Allow `const { props, state } = this`; false by default
           "allowedNames": ["me"] // Allow `const me = this`; `[]` by default
         }
-      ]
+      ],
+      "@typescript-eslint/no-empty-object-type": "off"
     },
   },
 )

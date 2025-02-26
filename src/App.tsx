@@ -3,9 +3,11 @@ import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.scss';
 import LanguageHook from './common/hooks/languageHook';
+import GlobalHook from './common/hooks/globalHook';
 
 function App() {
   const language = LanguageHook();
+  const global = GlobalHook();
   const [count, setCount] = useState(0)
 
   return (
@@ -18,7 +20,7 @@ function App() {
           <img src={reactLogo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>{language.appName}</h1>
+      <h1>{language.appName}. Version: {global.appVersion} + {global.appEnv}</h1>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
