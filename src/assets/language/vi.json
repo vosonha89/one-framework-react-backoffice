@@ -30,5 +30,18 @@
   "errorMessage": {
     "internalServerError": "Lỗi ứng dụng! Vui lòng liên hệ hỗ trợ.",
     "requiredField": "{field} không được để trống!"
+  },
+  "auth": {
+    "username": "Tên đăng nhập",
+    "password": "Mật khẩu",
+    "rememberMe": "Ghi nhớ",
+    "forgotPassword": "Quên mật khẩu?",
+    "confirmPassword": "Xác nhận mật khẩu",
+    "register": "Đăng ký",
+    "login": "Đăng nhập",
+    "error001": "Tên đăng nhập hoặc mật khẩu không đúng!",
+    "error002": "Tài khoản của bạn đã bị khóa!",
+    "error003": "Mật khẩu không khớp!",
+    "error004": "Thông tin người dùng không tồn tại!"
   }
 }

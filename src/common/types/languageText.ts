@@ -13,6 +13,21 @@ export interface LanguageText {
     label: Label;
     normalMessage: NormalMessage;
     errorMessage: ErrorMessage;
+    auth: Auth;
+}
+
+export interface Auth {
+    username: string;
+    password: string;
+    rememberMe: string;
+    forgotPassword: string;
+    confirmPassword: string;
+    register: string;
+    login: string;
+    error001: string;
+    error002: string;
+    error003: string;
+    error004: string;
 }
 
 export interface ErrorMessage {

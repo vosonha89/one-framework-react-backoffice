@@ -3,6 +3,9 @@ import { BaseResponseData } from '../../common/types/baseResponse'
 export interface LoginResponse extends BaseResponseData<AuthObjectResponse> {
 }
 
+export interface ProfileResponse extends BaseResponseData<AuthProfileObjectResponse> {
+}
+
 export interface AuthObjectResponse {
     id: number
     username: string

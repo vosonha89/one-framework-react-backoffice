@@ -10,8 +10,7 @@ export class LoadingService {
     public show(): boolean {
         const loadingEl = document.getElementById('loading');
         if (loadingEl) {
-            loadingEl.classList.remove('hidden');
-            loadingEl.classList.add('flex');
+            loadingEl.style.display = 'flex';
             return true;
         }
         else {
@@ -26,8 +25,7 @@ export class LoadingService {
     public hide(): boolean {
         const loadingEl = document.getElementById('loading');
         if (loadingEl) {
-            loadingEl.classList.remove('flex');
-            loadingEl.classList.add('hidden');
+            loadingEl.style.display = 'none';
             return true;
         }
         else {

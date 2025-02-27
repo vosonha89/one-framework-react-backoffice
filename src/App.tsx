@@ -1,39 +1,26 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
+import React, { useEffect } from 'react';
 import './App.scss';
-import LanguageHook from './common/hooks/languageHook';
-import GlobalHook from './common/hooks/globalHook';
+import globalHook from './common/hooks/globalHook';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { AppRouter } from './AppRouter';
 
-function App() {
-  const language = LanguageHook();
-  const global = GlobalHook();
-  const [count, setCount] = useState(0)
+function App(): React.ReactElement {
+  const global = globalHook();
+  const router = createBrowserRouter(AppRouter);
+
+  async function loadScript(): Promise<void> {
+    // global script load here
+  }
+
+  useEffect(() => {
+    window.parent.document.title = global.appName;
+    loadScript();
+    // userEffect implement here
+  }, [global.appName]);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank" rel="noopener">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noopener">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>{language.appName}. Version: {global.appVersion} + {global.appEnv}</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <RouterProvider router={router} />
+  );
 }
 
-export default App
+export default App;

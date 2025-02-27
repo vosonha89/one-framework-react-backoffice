@@ -32,7 +32,8 @@ export default tseslint.config(
           "allowedNames": ["me"] // Allow `const me = this`; `[]` by default
         }
       ],
-      "@typescript-eslint/no-empty-object-type": "off"
+      "@typescript-eslint/no-empty-object-type": "off",
+      "react-hooks/exhaustive-deps": "off"
     },
   },
 )

@@ -1,13 +1,23 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>React BackOffice</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>React BackOffice</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <div id="loading" class="loading">
+    <!-- https://10015.io/tools/css-loader-generator#google_vignette -->
+    <div class="logo">
+      <div class="logo-img"></div>
+    </div>
+    <div class="spinner"></div>
+  </div>
+  <script type="module" src="/src/main.tsx"></script>
+</body>
+
 </html>
