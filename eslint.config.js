@@ -6,7 +6,7 @@ import tseslint from 'typescript-eslint'
 
 export default tseslint.config(
   {
-    ignores: ['dist']
+    ignores: ['dist', 'themes', 'public']
   },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
@@ -33,7 +33,7 @@ export default tseslint.config(
         }
       ],
       "@typescript-eslint/no-empty-object-type": "off",
-      "react-hooks/exhaustive-deps": "off"
+      "react-hooks/exhaustive-deps": "off",
     },
   },
 )

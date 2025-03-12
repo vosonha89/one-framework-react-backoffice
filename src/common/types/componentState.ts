@@ -34,9 +34,9 @@ export abstract class ComponentState extends FWComponentState {
     }
 
     /**
-         * Hanlde form input changed
-         * @param e || HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-         */
+     * Hanlde form input changed
+     * @param e || HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
+     */
     public handleFormInputChanged(target: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement | AnyType): void {
         const me = this;
         if (target instanceof HTMLInputElement || target instanceof HTMLSelectElement || target instanceof HTMLTextAreaElement) {

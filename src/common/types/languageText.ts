@@ -22,8 +22,11 @@ export interface Auth {
     rememberMe: string;
     forgotPassword: string;
     confirmPassword: string;
+    showPassword: string;
     register: string;
+    registerHeader: string;
     login: string;
+    loginHeader: string;
     error001: string;
     error002: string;
     error003: string;
@@ -63,3 +66,4 @@ export interface Label {
 export interface NormalMessage {
     saveSuccess: string;
 }
+

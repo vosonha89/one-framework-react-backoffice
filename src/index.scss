@@ -36,7 +36,7 @@ body {
         .logo-img {
             width: 20px;
             height: 20px;
-            background-image: url('/logo.svg');
+            background-image: url("/logo.svg");
             background-size: 20px 20px;
         }
     }
@@ -58,5 +58,24 @@ body {
         to {
             transform: rotate(360deg);
         }
+    }
+}
+
+.page-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+$space: 2;
+@for $i from 1 through 100 {
+    /* Width size spacing */
+    .w-#{$i*$space}px {
+        width: #{$i * $space}px;
+    }
+    /* Height size spacing */
+    .h-#{$i*$space}px {
+        width: #{$i * $space}px;
     }
 }

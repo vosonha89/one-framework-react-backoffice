@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 import { AppRouterName } from '../../AppRouter';
 import { LoginState } from './Login.state';
+import InputFormHook from '../../common/hooks/formHook';
 
 /** For login view action */
 function LoginHook() {
     const [componentState, setcomponentState] = useState(new LoginState());
-
+    const inputFormHut = InputFormHook(componentState, setcomponentState);
+    
     /**
      * Login action
      */
@@ -17,6 +19,22 @@ function LoginHook() {
         }
         else {
             setcomponentState(pageState);
+        }
+    }
+
+    /**
+     * Show hide password
+     */
+    function showHidePassword(): void {
+        const element = document.getElementById('userPassword');
+        if (element) {
+            const passwordEl = element as HTMLInputElement;
+            if (passwordEl.type == 'password') {
+                passwordEl.type = 'text';
+            }
+            else {
+                passwordEl.type = 'password';
+            }
         }
     }
 
@@ -35,7 +53,9 @@ function LoginHook() {
     }, []);
     return {
         componentState,
-        login
+        login,
+        showHidePassword, 
+        handleFormInputChanged: inputFormHut.handleFormInputChanged
     };
 }
 
