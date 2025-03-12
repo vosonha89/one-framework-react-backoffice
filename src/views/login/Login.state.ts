@@ -32,7 +32,7 @@ export class LoginState extends ComponentState {
             const response = await me.authService.login(new LoginRequest(me.model.username, me.model.password));
             me.loadingService.hide();
             if (ObjectHelper.hasApiError(response)) {
-                me.alertService.addAlert(me.alertType.error.toString(), (response as SystemError).message);
+                me.alertService.addAlert(me.alertType.error, (response as SystemError).message);
             }
             else {
                 return true;

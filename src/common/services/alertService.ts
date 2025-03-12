@@ -13,26 +13,26 @@ export class AlertService {
      * @param alertType
      * @param message
      */
-    public addAlert(alertType: string, message: string, timeout = 2000): void {
+    public addAlert(alertType: number, message: string, timeout = 2000): void {
         const me = this;
         let alertTypeValue = '';
-        let className = 'alert-item';
-        switch (alertType) {
+        let alertClassName = 'alert-item ';
+        switch (alertType.toString()) {
             case me.alertTypes.error.toString():
                 alertTypeValue = me.language.text.label.error;
-                className = 'bg-danger';
+                alertClassName += 'text-danger border-danger bg-white';
                 break;
             case me.alertTypes.warning.toString():
                 alertTypeValue = me.language.text.label.warning;
-                className = 'bg-warning';
+                alertClassName += 'text-warning border-warning bg-white';
                 break;
             case me.alertTypes.success.toString():
                 alertTypeValue = me.language.text.label.success;
-                className = 'bg-success';
+                alertClassName += 'text-success border-success bg-white';
                 break;
             case me.alertTypes.info.toString():
                 alertTypeValue = me.language.text.label.information;
-                className = 'bg-info';
+                alertClassName += 'text-info border-info bg-white';
                 break;
         }
         const mainContainer = document.getElementById('alertContainer');
@@ -40,15 +40,13 @@ export class AlertService {
         alertBox.setAttribute('role', 'alert');
         alertBox.setAttribute('aria-live', 'assertive');
         alertBox.setAttribute('aria-atomic', 'true');
-        alertBox.className = className;
-        const html = `<div class="toast-header">
-                        <i class="bx bx-bell me-2"></i>
-                        <div class="me-auto fw-semibold">` + alertTypeValue + `</div>
-                        <small>11 mins ago</small>
-                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        alertBox.className = 'alert-item';
+        const html = `<div class="alert ` + alertClassName + ` alert-dismissible" role="alert">
+                    <div>
+                        <h4 class="alert-title mb-1">` + alertTypeValue + `</h4>
+                        <div class="text-dark">` + message + `</div>
                     </div>
-                    <div class="toast-body">
-                    ` + message + `
+                    <a class="btn-close small text-dark" data-bs-dismiss="alert" aria-label="close"></a>
                     </div>`;
         alertBox.innerHTML = html;
         mainContainer?.appendChild(alertBox);

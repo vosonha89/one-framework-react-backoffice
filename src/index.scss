@@ -68,6 +68,33 @@ body {
     align-items: center;
 }
 
+.alertContainer {
+    position: absolute;
+    z-index: 100000;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 15px;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .btn-close {
+        z-index: 1001;
+        pointer-events: all;
+        border: none !important;
+        box-shadow: none !important;
+    }
+}
+
+.alert-item {
+    width: 100%;
+    max-width: 500px;
+    min-width: 315px;
+    pointer-events: all;
+}
+
 $space: 2;
 @for $i from 1 through 100 {
     /* Width size spacing */
