@@ -6,7 +6,7 @@ import InputFormHook from '../../common/hooks/formHook';
 /** For login view action */
 function LoginHook() {
     const [componentState, setcomponentState] = useState(new LoginState());
-    const inputFormHut = InputFormHook(componentState, setcomponentState);
+    const inputFormHook = InputFormHook(componentState, setcomponentState);
     
     /**
      * Login action
@@ -55,7 +55,7 @@ function LoginHook() {
         componentState,
         login,
         showHidePassword, 
-        handleFormInputChanged: inputFormHut.handleFormInputChanged
+        handleFormInputChanged: inputFormHook.handleFormInputChanged
     };
 }
 
